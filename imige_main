@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chat UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    height:100vh;
+    display:flex;
+    overflow:hidden;
+}
+
+/* Left Sidebar */
+.sidebar{
+    width:110px;
+    background:#000;
+    border-right:4px solid #333;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:20px;
+}
+
+/* Hamburger */
+.menu{
+    cursor:pointer;
+}
+
+.menu div{
+    width:70px;
+    height:10px;
+    background:white;
+    margin:10px 0;
+    border-radius:3px;
+}
+
+/* Main Area */
+.main{
+    flex:1;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+}
+
+/* AI Response */
+.response{
+    flex:1;
+    background:#9c9c9c;
+    border-radius:28px;
+    margin:0 20px 15px;
+    display:flex;
+    flex-direction:column;
+    padding:25px;
+    overflow-y:auto;
+}
+
+/* Chat bubbles */
+.bubble{
+    max-width:75%;
+    padding:15px 20px;
+    margin:10px 0;
+    border-radius:25px;
+    font-size:20px;
+    line-height:1.4;
+}
+
+.ai{
+    background:#d9d9d9;
+    color:#000;
+    align-self:flex-start;
+}
+
+.user{
+    background:#5d9cff;
+    color:white;
+    align-self:flex-end;
+}
+
+/* Input Box */
+.input{
+    height:105px;
+    background:#9c9c9c;
+    border-radius:28px;
+    margin:0 20px 20px;
+    display:flex;
+    align-items:flex-start;
+    padding:18px;
+}
+
+.input textarea{
+    width:100%;
+    height:100%;
+    border:none;
+    background:transparent;
+    resize:none;
+    outline:none;
+    font-size:24px;
+    color:black;
+}
+
+.input textarea::placeholder{
+    color:black;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="response">
+
+        <div class="bubble user">
+            Hello!
+        </div>
+
+        <div class="bubble ai">
+            Hi! How can I help you today?
+        </div>
+
+        <div class="bubble user">
+            Can you explain AI?
+        </div>
+
+        <div class="bubble ai">
+            Sure! Artificial Intelligence is software that can understand,
+            reason, and generate responses based on information it has learned.
+        </div>
+
+    </div>
+
+    <div class="input">
+        <textarea placeholder="input"></textarea>
+    </div>
+
+</div>
+
+</body>
+</html>
